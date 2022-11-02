@@ -1,0 +1,123 @@
+{% extends '_layouts/layout-pins.html' %}
+
+{% set back = false %}
+{% set nav = false %}
+{% set title = 'All prototypes' %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">
+      {{ title }}
+    </h1>
+
+    {% set appealHTML %}
+      <h2 class="govuk-heading-m">
+        Appeal a planning decision
+      </h2>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+        Common journeys and patterns
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="appeal/before-you-start/">Before you start</a>
+        </li>
+        <li>
+          <a>Save and return</a>
+        </li>
+        <li>
+          <a>GOV.UK guidance</a>
+        </li>
+        <li>
+          <a>Service offline</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+        Appeal types
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a>HAS</a>
+        </li>
+        <li>
+          <a>Full planning</a>
+        </li>
+        <li>
+          <a>Enforcement</a>
+        </li>
+        <li>
+          <a>Lawful development</a>
+        </li>
+      </ul>
+    {% endset -%}
+
+    {% set manageHTML %}
+      <h2 class="govuk-heading-m">
+        Manage LPA appeals
+      </h2>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+        Common journeys and patterns
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a>Dashboard / add users</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+        Appeal processes
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a>Questionnaire</a>
+        </li>
+        <li>
+          <a>Statement</a>
+        </li>
+        <li>
+          <a>Final comments</a>
+        </li>
+      </ul>
+    {% endset -%}
+
+    {% set commentHTML %}
+      <h2 class="govuk-heading-m">
+        Find and comment on an appeal
+      </h2>
+      <p>Coming soon…</p>
+    {% endset -%}
+
+    {{ govukTabs({
+      items: [
+        {
+          label: 'Appeal a planning decision',
+          id: 'appeal',
+          panel: {
+            html: appealHTML
+          }
+        },
+        {
+          label: 'Manage LPA appeals',
+          id: 'manage',
+          panel: {
+            html: manageHTML
+          }
+        },
+        {
+          label: 'Find and comment on an appeal',
+          id: 'comment',
+          panel: {
+            html: commentHTML
+          }
+        }
+      ]
+    }) }}
+
+
+  </div>
+</div>
+{% endblock %}
