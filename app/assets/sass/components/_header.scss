@@ -1,13 +1,33 @@
 .app-c-layout-header .govuk-header__container {
 	border-bottom-color: govuk-colour("turquoise");
+	padding-top: 5px;
 }
 
 .app-c-header__logo {
 	white-space: nowrap;
 	width: auto;
+	margin-bottom: 5px;
+
+	.govuk-header__logotype {
+		padding-right: 5px;
+		&:after {
+			display: inline-block;
+			content: "";
+			background-color: #fff;
+			width: 1px;
+			height: 25px;
+			position: relative;
+			top: 5px;
+			left: 6px;
+		}
+	}
 
 	.govuk-header__link {
 		line-height: 40px;
+	}
+
+	.govuk-header__logotype-text {
+		font-size: 24px;
 	}
 }
 
